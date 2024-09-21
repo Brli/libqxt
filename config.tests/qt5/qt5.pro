@@ -1,5 +1,5 @@
 TEMPLATE = app
-TARGET = qt4
+TARGET = qt5
 DEPENDPATH += .
 INCLUDEPATH += .
 SOURCES += main.cpp
