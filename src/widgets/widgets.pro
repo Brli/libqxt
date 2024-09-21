@@ -1,9 +1,9 @@
 CLEAN_TARGET     = QxtWidgets
 DEFINES         += BUILD_QXT_GUI
-QT               = core gui 
+QT               = core gui
 
 isEqual(QT_MAJOR_VERSION, 5) {
-	QT += widgets gui-private
+	QT += widgets gui-private x11extras
 }
 
 QXT              = core
@@ -24,4 +24,4 @@ macx:LIBS       += -framework Carbon
 # in the necessary symbols at run time.
 contains(QMAKE_LFLAGS, "-Wl,--no-undefined"):LIBS += $${QMAKE_LIBS_X11}
 
-unix|win32-g++*:QMAKE_PKGCONFIG_REQUIRES += QxtCore QtGui
+unix|win32-g++*:QMAKE_PKGCONFIG_REQUIRES += QxtCore QtGui QtX11Extras
