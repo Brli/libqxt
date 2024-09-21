@@ -4,4 +4,4 @@ TARGET = xrandr
 DEPENDPATH += .
 INCLUDEPATH += .
 SOURCES += main.cpp
-!win32:LIBS+=-lXrandr
+!win32:LIBS+=-lXrandr -lX11
